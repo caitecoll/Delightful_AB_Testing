@@ -12,11 +12,12 @@ export default class RadioButtons extends React.Component {
   };
 
   render() {
+    const { value } = this.state;
     return (
       <FormControl className={styles.formControl}>
         <InputLabel htmlFor="dropdown">Favorite Star Wars Movie?</InputLabel>
         <Select
-          value={this.state.value}
+          value={value}
           onChange={this.handleChange}
           inputProps={{
             name: 'dropdown',
