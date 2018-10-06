@@ -60,7 +60,9 @@ export default class RadioButtons extends React.Component {
               }}
             >
               {starWarsMovies.map((title, index) => (
-                <MenuItem value={index + 1}>{title}</MenuItem>
+                <MenuItem key={title} value={index + 1}>
+                  {title}
+                </MenuItem>
               ))}
             </Select>
           </Variant>
@@ -75,7 +77,9 @@ export default class RadioButtons extends React.Component {
               }}
             >
               {harryPotterMovies.map((title, index) => (
-                <MenuItem value={index + 1}>{title}</MenuItem>
+                <MenuItem key={title} value={index + 1}>
+                  {title}
+                </MenuItem>
               ))}
             </Select>
           </Variant>
