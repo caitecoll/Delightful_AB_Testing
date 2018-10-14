@@ -10,6 +10,7 @@ import { create } from 'jss';
 import React from 'react';
 import JssProvider from 'react-jss/lib/JssProvider';
 import FormControls from '../FormControls';
+import SearchForm from '../SearchForm';
 import './App.css';
 
 const generateClassName = createGenerateClassName();
@@ -28,6 +29,7 @@ const App = () => (
     <MuiThemeProvider theme={theme}>
       <div className="app">
         <FormControls />
+        <SearchForm />
       </div>
     </MuiThemeProvider>
   </JssProvider>
