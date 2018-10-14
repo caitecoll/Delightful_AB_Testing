@@ -23,5 +23,8 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "dist": true
+  },
+  "eslint.options": {
+    "parser": "babel-eslint"
   }
 }

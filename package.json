@@ -4,9 +4,12 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.1.2",
+    "jss": "^9.8.7",
     "node-sass": "^4.9.3",
     "react": "^16.5.2",
+    "react-ab-test": "^2.0.1",
     "react-dom": "^16.5.2",
+    "react-jss": "^8.6.1",
     "react-scripts": "^2.0.4"
   },
   "scripts": {
@@ -20,5 +23,14 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-babel": "^5.2.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1"
+  }
 }

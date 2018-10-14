@@ -11,10 +11,12 @@ export default class RadioButtons extends React.Component {
   };
 
   render() {
+    const { value } = this.state;
+
     return (
       <FormControl component="fieldset">
         <FormLabel component="legend">Radios</FormLabel>
-        <RadioGroup name="radios" value={this.state.value} onChange={this.handleChange}>
+        <RadioGroup name="radios" value={value} onChange={this.handleChange}>
           <FormControlLabel value="1" control={<Radio />} label="Radio 1" />
           <FormControlLabel value="2" control={<Radio />} label="Radio 2" />
           <FormControlLabel value="3" control={<Radio />} label="Radio 3" />
