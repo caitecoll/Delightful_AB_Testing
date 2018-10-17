@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/delightful_ab_testing/precache-manifest.88f50363e812004393715430362ac32d.js"
+  "/Delightful_AB_Testing/precache-manifest.2881ff109e8c8f4fc46cf5c1d49d3817.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/delightful_ab_testing/index.html", {
+workbox.routing.registerNavigationRoute("/Delightful_AB_Testing/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
