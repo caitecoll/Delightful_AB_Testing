@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core/styles';
 import { create } from 'jss';
 import React from 'react';
+import emitter from 'react-ab-test/lib/emitter';
 import JssProvider from 'react-jss/lib/JssProvider';
 import FormControls from '../FormControls';
 import SearchForm from '../SearchForm';
@@ -22,6 +23,10 @@ const theme = createMuiTheme({
     primary: blue,
     secondary: orange,
   },
+});
+
+emitter.addPlayListener((experimentName, variantName) => {
+  console.log(`Displaying experiment "${experimentName}"; variant "${variantName}"`);
 });
 
 const App = () => (

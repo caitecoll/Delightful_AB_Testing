@@ -9,6 +9,8 @@ import {
   Typography,
 } from '@material-ui/core';
 import React from 'react';
+import Experiment from 'react-ab-test/lib/Experiment';
+import Variant from 'react-ab-test/lib/Variant';
 import styles from './SearchForm.module.scss';
 
 export default class SearchForm extends React.Component {
@@ -81,25 +83,32 @@ export default class SearchForm extends React.Component {
             </Button>
           </div>
         </form>
-        <Typography>
-          Would you like to see your organization&apos;s cloud data in the results?{' '}
-          <a href="#">Sign up</a> for a cloud connector addon like Google Drive or OneDrive today!
-        </Typography>
-        <Snackbar
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'left',
-          }}
-          open={messageOpen}
-          autoHideDuration={6000}
-          onClose={this.handleClose}
-          message="Would you like to see your organization&apos;s cloud data in the results? Sign up for a cloud connector addon like Google Drive or OneDrive."
-          action={[
-            <Button color="secondary" size="small">
-              Sign up
-            </Button>,
-          ]}
-        />
+        <Experiment name="Search Filter CTA">
+          <Variant name="Inline">
+            <Typography>
+              Would you like to see your organization&apos;s cloud data in the results?{' '}
+              <a href="#">Sign up</a> for a cloud connector addon like Google Drive or OneDrive
+              today!
+            </Typography>
+          </Variant>
+          <Variant name="Popup">
+            <Snackbar
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              open={messageOpen}
+              autoHideDuration={6000}
+              onClose={this.handleClose}
+              message="Would you like to see your organization&apos;s cloud data in the results? Sign up for a cloud connector addon like Google Drive or OneDrive."
+              action={
+                <Button color="secondary" size="small">
+                  Sign up
+                </Button>
+              }
+            />
+          </Variant>
+        </Experiment>
       </div>
     );
   }
