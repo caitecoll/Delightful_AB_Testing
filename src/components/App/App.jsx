@@ -10,8 +10,7 @@ import { create } from 'jss';
 import React from 'react';
 import emitter from 'react-ab-test/lib/emitter';
 import JssProvider from 'react-jss/lib/JssProvider';
-import FormControls from '../FormControls';
-import SearchForm from '../SearchForm';
+import Router from '../Router';
 import './App.css';
 
 const generateClassName = createGenerateClassName();
@@ -33,8 +32,7 @@ const App = () => (
   <JssProvider jss={jss} generateClassName={generateClassName}>
     <MuiThemeProvider theme={theme}>
       <div className="app">
-        <FormControls />
-        <SearchForm />
+        <Router />
       </div>
     </MuiThemeProvider>
   </JssProvider>
