@@ -1,0 +1,21 @@
+.searchForm {
+  padding: 40px;
+}
+
+.fields {
+  display: flex;
+  margin-bottom: 16px;
+
+  > * {
+    margin-right: 8px;
+  }
+}
+
+.valueField {
+  flex-grow: 1;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}

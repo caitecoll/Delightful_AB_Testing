@@ -1,6 +1,5 @@
 import { FormControl, InputLabel, MenuItem, Select } from '@material-ui/core';
 import React from 'react';
-import emitter from 'react-ab-test/lib/emitter';
 import Experiment from 'react-ab-test/lib/Experiment';
 import Variant from 'react-ab-test/lib/Variant';
 import styles from './Dropdown.module.scss';
@@ -31,14 +30,6 @@ export default class RadioButtons extends React.Component {
   state = {
     value: 4,
   };
-
-  constructor(props) {
-    super(props);
-
-    emitter.addPlayListener((experimentName, variantName) => {
-      console.log(`Displaying experiment "${experimentName}"; variant "${variantName}"`);
-    });
-  }
 
   handleChange = (e) => {
     this.setState({ value: e.target.value });
